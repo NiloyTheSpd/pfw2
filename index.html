@@ -119,37 +119,3 @@
     </div>
   </div>
 </section>
-
-<script>
-// =========== CART UPDATE SCRIPT FOR "OUR PLANTS" SECTION ==========
-
-// Get reference to the cart amount span in the navbar
-const cartAmount = document.getElementById('cart-amount');
-
-// Start cart value (adjust this if your initial value is different)
-let cartTotal = 0;
-
-// Select all "Add to Cart" buttons in the plants section
-const addToCartButtons = document.querySelectorAll('.plant-cart-btn');
-
-// Add a click event to each button
-addToCartButtons.forEach(btn => {
-  btn.addEventListener('click', function() {
-    // Find the parent plant card
-    const plantCard = btn.closest('.plant-card');
-    // Find the price text and extract number
-    const priceText = plantCard.querySelector('.plant-price').textContent;
-    // Use regex to get the number part (e.g., 20 from "20 USD")
-    const price = parseFloat(priceText);
-
-    // Add the plant's price to the total
-    cartTotal += price;
-
-    // Update the cart display in the navbar
-    cartAmount.textContent = `$${cartTotal}`;
-
-    // Optional: Show alert when item is added
-    alert('Flower Added to Cart');
-  });
-});
-</script>
