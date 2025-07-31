@@ -195,3 +195,134 @@ body {
     padding-bottom: 22px;
   }
 }
+
+.plants-section {
+  background: #f8faff;
+  padding: 48px 0 60px 0;
+  text-align: center;
+}
+
+.plants-section h2 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+  font-family: 'Inter', serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.plants-title-orange {
+  color: #f36b13;
+  font-weight: 700;
+  font-family: 'Inter', serif;
+  margin-right: 4px;
+}
+
+.plants-title-black {
+  color: #191919;
+  font-weight: 700;
+  font-family: 'Inter', serif;
+}
+
+.plants-section-desc {
+  color: #9697a7;
+  font-size: 1.11rem;
+  max-width: 530px;
+  margin: 0 auto 34px auto;
+  line-height: 1.5;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.plants-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px 28px;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 1150px;
+  width: 100%;
+}
+
+.plant-card {
+  background: #f8faff;
+  border-radius: 0px;
+  box-shadow: none;
+  width: 235px;
+  padding: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  margin: 0 auto;
+}
+
+.plant-card img {
+  width: 235px;
+  height: 245px;
+  object-fit: cover;
+  margin-bottom: 18px;
+  background: #fff;
+}
+
+.plant-name {
+  color: #191919;
+  font-size: 1.08rem;
+  font-family: 'Inter', Arial, sans-serif;
+  margin-bottom: 2px;
+  margin-top: 4px;
+}
+
+.plant-price {
+  font-size: 1.12rem;
+  color: #191919;
+  margin-bottom: 22px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: bold;
+}
+
+.plant-cart-btn {
+  width: 100%;
+  background: #f36b13;
+  color: #fff;
+  font-size: 1.03rem;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  border: none;
+  border-radius: 0px;
+  padding: 13px 0;
+  margin-top: 10px;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: background 0.2s;
+  letter-spacing: 1px;
+}
+
+.plant-cart-btn:hover {
+  background: #d65f11;
+}
+
+@media (max-width: 900px) {
+  .plants-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 14px;
+    max-width: 95vw;
+  }
+  .plant-card {
+    width: 95vw;
+    max-width: 265px;
+  }
+  .plant-card img {
+    width: 95vw;
+    max-width: 265px;
+    height: 190px;
+  }
+}
+
+@media (max-width: 500px) {
+  .plants-section h2 {
+    font-size: 1.4rem;
+  }
+  .plants-grid {
+    grid-template-columns: 1fr;
+    gap: 22px 0;
+  }
+}
